@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {       /*Muda apenas o texto atribuído a id 'area'*/
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = "area" onclick = "clicar()" onmouseenter = "entrar()" onmouseleave = "sair()" >
+            Interaja ...
+        </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)         /*Quando o mouse clicar na área a função será executada*/
+        a.addEventListener('mouseenter', entrar)    /*Quando o mouse entrar na área a função será executada*/
+        a.addEventListener('mouseout', sair)        /*Quando o mouse sair da área a função será executada*/
+        function clicar() {              /*Função que será executada quando o usuário clicar na área selecionada*/
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+        }
+        function entrar() {              /*Função que será executada quando o usuário entrar com o mouse na área selecionada*/
+            a.innertext = 'Entrou'
+        }
+        function sair() {                /*Função que será executada quando o usuário sair com o mouse da área selecionada*/
+            a.innertext = 'Saiu'
+        }
+    </script>
+    </body>
+</html>

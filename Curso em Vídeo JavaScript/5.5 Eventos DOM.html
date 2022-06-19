@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {         /*Altera a aparência das caixas de texto que o usuário digita*/
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {      /*Altera a aparência da seção de resultado*/
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>       <!--Título da página-->
+    <input type='number' name='txtn1' id='txtn1'> +     <!--Comando que cria uma caixa para serem digitados números pelo usuário-->
+    <input type='number' name ='txtn2' id='txtn2'>      <!--Comando que cria uma caixa para serem digitados números pelo usuário-->
+    <input type='button' value='Somar' onclick='somar()'> <!--Comando que cria um botão, quando o usuário aperta o botão a função somar é executada-->
+    <div id='res'>Resultado</div>   <!--Cria um texto com uma id o identificando-o-->
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')  /*A variável tn1 recebe o valor colocado na caixa txtn1*/
+            var tn2 = window.document.getElementById('txtn2')  /*A variável tn2 recebe o valor colocado na caixa txtn2*/
+            var res = window.document.getElementById('res')    /*A variável res recebe o texto e a identificação do que estiver na seção div*/
+            var n1 = Number(tn1.value)     /*A variável n1 converte o valor de tn1 para número*/
+            var n2 = Number(tn2.value)     /*A variável n2 converte o valor de tn2 para número*/
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>.` /*substitui o texto que está na variável res*/
+        }
+    </script>
+    
+</body>
+</html>
