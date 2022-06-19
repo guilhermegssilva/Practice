@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            font: normal 22pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id = 'msg'>Clique me mim</div>   <!--Atribui um id para esse elemento, sendo mais fácil achá-lo-->
+    <div name = 'abc'> Clique aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]        /*Comando para pegar um elemento específico da página. Os [] indicam qual deles caso haja mais de um*/
+        var corpo = window.document.body      /*Coloca toda a tag body dentro de uma variável*/ 
+        corpo.style.background = 'yellow'     /*Muda a cor do background usando a variável criada*/
+        window.document.write('Está escrito assim: ' + p1.innerText) /*Será escrito o conteúdo desse elemento específico*/
+        p1.style.color = 'blue'   /*Muda a cor do elemento*/ 
+        var d = window.document.getElementById('msg')   /*Seleciona um elemento com base na id atribuída à ele*/
+        var n = window.document.getElementsByName('abc') /*Seleciona um elemento com base no nome atribuído à ele*/
+        d.style.background = 'green'       /*Muda a cor do background apenas da linha em que o elemento está presente*/
+        d.innerText = 'Estou aguardando ...'   /*Muda o texto presente do elemento escolhido*/
+    </script>
+    
+</body>
+</html>

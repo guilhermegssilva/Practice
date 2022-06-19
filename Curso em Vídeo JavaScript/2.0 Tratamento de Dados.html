@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-Br">               <!-- As informações que estiverem entre <> serão tags -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>       <!--Oque estiver entre as tag title será o título da página-->
+    <style>                                          /*Essa parte dentro da tag style altera o estilo da página e faz parte do css*/
+    body {  background-color: rgb(178, 248, 250);  /*Muda a cor do background da página*/
+            color: white;                          /*Muda a cor da fonte*/
+            font: normal 25pt Arial;                 /*Muda o tamanho da fonte*/
+    }
+    h1 {
+        color:rgb(236, 15, 15)              /*Muda apenas a cor do título*/
+    }     
+         </style>
+</head>
+<body>
+    <h1>Olá mundo!</h1>                    <!--O sinal <h1> no começo e no final de uma frase indica que ela será o título da página-->
+    <p>Oque estiver aqui será escrito na página</p> 
+    <script>                               /*O script é colocado ao final do body para para que os scripts sejam carregados depois do código base*/
+        window.alert('Minha primeira mensagem!'); /*Escreve uma mensagem na tela*/
+        window.confirm('Está gostando de JS')   /*Janela de ok e cancel*/
+        var nome = window.prompt('Qual é o seu nome?')    /*A variável nome recebe a resposta do prompt*/
+        window.alert('Seja bem vindo ' + nome + '!')
+        var n1 = window.prompt('Digite um número:')       /*O número recebido será uma string e deverá ser convertido*/
+        var n2 = window.prompt('Digite outro número:')    /*O número recebido será uma string e deverá ser convertido*/
+        var soma = Number(n1) + Number(n2)                /*Converte uma string para um número*/
+        soma = String(soma)                               /*Converte um número para uma string*/
+        window.alert('O resultado da soma é ' + soma)
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`) /*Permite colocar variáveis dentro de strings (a string fica entre crases)*/
+        document.write(`Olá ${nome}. Seu nome tem ${nome.length} letras!`)  /*Comando para escrever algo na tela*/
+        document.write(`Seu nome em maiúscula fica ${nome.toUpperCase()}`)  /*Transforma a string em maiúscula*/
+    </script>
+</body>
+</html>
+<!--
+frase = 'Eu adoro Java Script'
+frase.toUppercase()  ==   Toda a frase em letras maiúsculas
+frase.toLowercase()  ==   Toda a frase em letras minúsculas
+frase.length     ==   O número de elementos da frase
+-->
