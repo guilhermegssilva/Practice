@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color:darkred;
+            text-decoration: none;  /*Retira o sublinhado das palavras*/
+        }
+        a:visited {
+            color:blueviolet; /*Caso o site já tenha sido visitado, muda a cor do texto*/
+        }
+        a:hover {   /*Enquanto o usuário passar o mouse no texto as mudanças serão aplicadas*/
+            text-decoration: underline;  /*Adiciona sublinhado no texto*/
+            font-size: larger;  /*Aumenta o tamanho da fonte*/
+        }
+        a::after { /*Adiciona essas mudanças depois do que estiver na tag <a>*/
+            content:'[link]';  /*Adiciona algo escrito no final*/
+            text-decoration: none;
+            font-weight: normal;
+            color:deepskyblue;
+        }
+        a.especial {  /*Mudanças feitas apenas na classe especial*/
+            color: black;
+            background-color: aquamarine;
+        }
+        a.especial::after {  /*Adiciona essas mudanças depois do que estiver na classe especial*/
+           content: '←';
+           color:black;
+        }
+        a.especial::before {  /*Adiciona essas mudanças antes do que estiver na classe especial*/
+            content: '→';
+        }
+    </style>
+</head>
+<body>
+    <h1>Links</h1>
+    <li><a href='https://www.amazon.com.br/' target = 'blank' class = 'especial'>Amazon</a></li>
+    <li><a href="https://www.facebook.com/" target = blank>Facebook</a></li>
+    <li><a href="https://www.youtube.com/" target = blank>Youtube</a></li>
+    
+</body>
+</html>
