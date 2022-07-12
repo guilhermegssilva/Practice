@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de Fundo</title>
+    <style>
+        body {
+            background-image: url('Imagens/Background_Images/wallpaper001.jpg');  /*Comando para inserir imagens no fundo da página*/
+        }
+        div.quadrado {  /*Configurações das divs da classe quadrado*/
+            border: 2px solid black;
+            display: inline-block;
+            border-radius: 10px;
+            background-color: lightgray;
+            width: 300px;
+            height: 300px;
+        }
+        div#q1 {
+            background-color: skyblue;
+        }
+        div#q2 {
+            background-image: linear-gradient(to bottom, yellow, red);
+        }
+        div#q3 {   /*Coloca uma imagem dentro do item criado pela tag <div>*/
+            background-image: url('Imagens/background images/pattern001.png');
+        }
+    </style>
+</head>
+<body>   <!--O comando div.quadrado*3 cria as tags divs já com a classe quadrado automaticamente-->
+    <div class="quadrado" id = 'q1'></div>
+    <div class="quadrado" id = 'q2'></div>
+    <div class="quadrado" id = 'q3'></div>
+</body>
+</html>

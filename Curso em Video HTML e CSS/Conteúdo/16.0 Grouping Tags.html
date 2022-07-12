@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav {
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+        }
+        nav > a {  /*Modifica apenas a tag <a> dentro da tag <nav>*/
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+        }
+        article {
+            background-color: lightgrey;
+            padding: 5px;
+        }
+        article > aside { /*Modifica apenas a tag <aside> dentro da tag <article>*/
+            background-color: rgb(165, 165, 165);
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 0px;
+        }
+        footer > p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>   <!--Conjunto de tags para deixar o body da página mais organizado-->
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>   
+        <section id = 'assuntos'>
+            <p>Esportes Política e Tecnologia</p>
+            
+        </section>
+        <section id = 'notícias'>
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique non at suscipit, neque dicta 
+                consequuntur rerum id perspiciatis asperiores laudantium tempore blanditiis maiores error quod officia
+                minima nihil iste? Errorim.</p>
+            </article>
+            <aside>
+                <p>Artigo escrito por José da Silva</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Cursoemvídeo</p>
+    </footer>
+</body>
+</html>
