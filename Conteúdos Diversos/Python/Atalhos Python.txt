@@ -1,0 +1,25 @@
+from datetime import datetime
+
+currentSecond= datetime.now().second
+currentMinute = datetime.now().minute
+currentHour = datetime.now().hour
+
+currentDay = datetime.now().day
+currentMonth = datetime.now().month
+currentYear = datetime.now().year
+
+:.1f - Mostra quantas casas decimais após o número da varíavel
+:5 - A variável aparecerá 5 espaços mais afastada da posição original
+:^50 - A variável aparecerá centralizada deixando a metade de espaços(25) de cada lado
+:>20 - A variável aparecererá alinhada para a direita deixando os espaços dados(20)
+:<20 - A variável aparecerá alinhada para a esquerda deixando os espaços dados(20)
+
+num = '123456789'
+num1 = '{}{}{}-{}{}{}-{}{}{}'.format(*num)
+print(num1)
+
+verificador de email regex = (r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+')
+
+
+
+
